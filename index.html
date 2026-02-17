@@ -1,64 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> FromDeadJ_Info </title>
-    <link rel = "stylesheet" href = "style.css">
+    <title> FromDeadJ_Info </title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<!---->
-<body style = "background: linear-gradient(135deg, #0f0c29, #302b63, #ff00cc);">
-<!---->
+
+<body style="background: linear-gradient(135deg, #0f0c29, #302b63, #ff00cc); min-height: 100vh;">
+
 <header class="d-flex flex-column header-h p-3 position-relative col-12">
     <div class="p-3 mx-5 rounded" style="background: linear-gradient(135deg, #0f0c29, #302b63, #ff00cc);">
       <h1 class="d-flex text-white justify-content-center fw-light pb-1">FromDeadJ</h1>
-      <div id = "poh" class="d-flex justify-content-evenly">
-        <a class="text-white fs-4" href = "https://open.spotify.com/artist/0DutditBY3BDYylok2ACdQ?si=g2P-rkGPS_iEY2Y1U5RFsg" target="_blank">Spotify</a>
-        <a class="text-white fs-4" href = "https://www.youtube.com/channel/UCFqouu6v6vOuPNsgmsn8gSQ" target="_blank">Youtube</a>
-        <a class="text-white fs-4" href = "https://music.apple.com/de/artist/fromdeadj/1618913421" target="_blank">Apple Music</a>
-        <a class="text-white fs-4" href = "https://www.deezer.com/us/artist/170257537" target="_blank">Deezer</a>
+      <div id="poh" class="d-flex justify-content-evenly">
+        <a class="text-white fs-4" href="https://open.spotify.com/artist/0DutditBY3BDYylok2ACdQ?si=g2P-rkGPS_iEY2Y1U5RFsg" target="_blank">Spotify</a>
+        <a class="text-white fs-4" href="https://www.youtube.com/channel/UCFqouu6v6vOuPNsgmsn8gSQ" target="_blank">Youtube</a>
+        <a class="text-white fs-4" href="https://music.apple.com/de/artist/fromdeadj/1618913421" target="_blank">Apple Music</a>
+        <a class="text-white fs-4" href="https://www.deezer.com/us/artist/170257537" target="_blank">Deezer</a>
       </div>
     </div>
 </header>
-<!---->
-<!--Main content-->
+
 <main class="d-flex flex-column align-items-center content-mt">
-    <!---->
-    <h4 style = "color: red">Break it!:</h4>
-    <a href = "https://youtu.be/m-p6_VjXNbY?si=eJ8NjpprysyT1DTi">
-    <image class="cover" src = "images/FIN TEST 1.jpg" width = "500" heigth = "500" alt = "Night Vision cover"></image>
-    </a><br>
-    <p style = "color: red; text-shadow: 0 0 8px #ff0000;">Single "Break it!" was recorded in March 2025 using Arturia MiniFreak with custom presets </p><br>
-    <p style = "color: red; text-shadow: 0 0 8px #ff0000;">DAW that was used for this song:FL Studio 20, with PreSonus audio interface.</p><br>
-    <!---->
-    <h4 style = "color: black">Night Vision:</h4>
-    <a href = "https://music.youtube.com/watch?v=dAfrO-ZWvso">
-    <image class="cover2" src = "images/nigt_vision.jpg" width = "500" heigth = "500" alt = "Night Vision cover"></image>
-    </a><br>
-    <p style = "color: black;text-shadow: 0 0 8px #000000;">Night Vision was recorded in july 2024 using default presets from Behringer DeepMind 12 synthesizer and was released in august.</p><br>
-    <p style = "color: black;text-shadow: 0 0 8px #000000;">DAW that was used for this song:FL Studio 20, with PreSonus audio interface.</p><br>
-    <!---->
-    <h4 style = "color: white">Second Opinion:</h4>
-    <a href = "https://music.youtube.com/playlist?list=OLAK5uy_l96YiL6iW88ejAEUH1-FZYJ3_IZzUiRHQ&si=spj_bBzrSPoRCZY5">
-    <image class="cover3" src = "images/sco.jpg" width = "500" heigth = "500" alt = "Night Vision cover"></image>
-    </a><br>
-    <p style = "color: white;text-shadow: 0 0 8px #FFFFFF;">Second Opinion was recorded in May 2023 using custom presets from Serum synthesizer and was released in July.</p><br>
-    <p style = "color: white;text-shadow: 0 0 8px #FFFFFF;">DAW that was used for this song:FL Studio 20, with Akai MPK mini MK3 midi keyboard.</p><br>
-    <!---->
+    <div id="root"></div>
 </main>
 
-<!---->
-<footer class="d-flex col-12 px-5 mb-5">
+<footer class="d-flex col-12 px-5 mb-5 mt-5">
     <div class="p-3 d-flex flex-row justify-content-between rounded w-100" style="background: linear-gradient(135deg, #0f0c29, #302b63, #ff00cc);">
       <div class="d-flex flex-column">
-        <p class="text-white fs-4" style = "font-family: Courier New;">author: Mykyta Maltsev</p>
-        <p class="text-white fs-4" style = "font-family: Courier New;">&copy;Mykyta Maltsev</p>
+        <p class="text-white fs-4" style="font-family: Courier New; margin: 0;">author: FromDeadJ</p>
+        <p class="text-white fs-4" style="font-family: Courier New; margin: 0;">&copy;FromDeadJ</p>
       </div>
       <div class="d-flex flex-column">
-        <p class="text-white fs-4" style = "font-family: Courier New;"> Defuse127@gmail.com </p>
+        <p class="text-white fs-4" style="font-family: Courier New;"> Defuse127@gmail.com </p>
       </div>
     </div>
 </footer>
-<!---->
+
+<script type="text/babel">
+    const { useState } = React;
+
+    const TrackList = () => {
+        // stored data
+        const tracks = [
+            {
+                title: "Break it!:",
+                link: "https://youtu.be/m-p6_VjXNbY?si=eJ8NjpprysyT1DTi",
+                img: "images/FIN TEST 1.jpg",
+                imgClass: "cover",
+                color: "red",
+                shadow: "0 0 8px #ff0000",
+                desc1: "Single 'Break it!' was recorded in March 2025 using Arturia MiniFreak with custom presets",
+                desc2: "DAW that was used for this song: FL Studio 20, with PreSonus audio interface."
+            },
+            {
+                title: "Night Vision:",
+                link: "https://music.youtube.com/watch?v=dAfrO-ZWvso",
+                img: "images/nigt_vision.jpg",
+                imgClass: "cover2",
+                color: "black",
+                shadow: "0 0 8px #000000",
+                desc1: "Night Vision was recorded in july 2024 using default presets from Behringer DeepMind 12 synthesizer and was released in august.",
+                desc2: "DAW that was used for this song: FL Studio 20, with PreSonus audio interface."
+            },
+            {
+                title: "Second Opinion:",
+                link: "https://music.youtube.com/playlist?list=OLAK5uy_l96YiL6iW88ejAEUH1-FZYJ3_IZzUiRHQ&si=spj_bBzrSPoRCZY5",
+                img: "images/sco.jpg",
+                imgClass: "cover3",
+                color: "white",
+                shadow: "0 0 8px #FFFFFF",
+                desc1: "Second Opinion was recorded in May 2023 using custom presets from Serum synthesizer and was released in July.",
+                desc2: "DAW that was used for this song: FL Studio 20, with Akai MPK mini MK3 midi keyboard."
+            }
+        ];
+
+        return (
+            <div className="d-flex flex-column align-items-center">
+                {tracks.map((track, index) => (
+                    <div key={index} className="text-center mb-5">
+                        <h4 style={{ color: track.color }}>{track.title}</h4>
+                        <a href={track.link} target="_blank">
+                            <img
+                                className={track.imgClass}
+                                src={track.img}
+                                width="500"
+                                height="500"
+                                alt={track.title}
+                            />
+                        </a>
+                        <br /><br />
+                        <p style={{ color: track.color, textShadow: track.shadow }}>{track.desc1}</p>
+                        <p style={{ color: track.color, textShadow: track.shadow }}>{track.desc2}</p>
+                    </div>
+                ))}
+            </div>
+        );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<TrackList />);
+</script>
 
 </body>
 </html>
