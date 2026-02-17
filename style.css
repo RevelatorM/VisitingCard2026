@@ -1,0 +1,50 @@
+h1{
+    font-family: Courier New;
+    font-size: 36px;
+}
+#poh a {
+    font-family: "Courier New", monospace;
+    transition: all 0.3s ease;
+}
+
+#poh a:hover {
+    text-shadow: 0 0 10px purple,
+                 0 0 20px #ff00ff;
+    transform: translateY(-2px);
+}
+
+#poh a {
+    text-decoration: none;
+}
+/*-----*/
+.header-h { height: 120px; }
+.content-mt { margin-top: 140px; }
+/*-----*/
+h4{
+    font-family: Courier New;
+    font-size: 16px;
+}
+/*-----*/
+p1{
+    font-family: Courier New;
+}
+p2{
+    font-family: Courier New;
+}
+p3{
+    font-family: Courier New;
+}
+p4{
+    font-family: Courier New;
+}
+/*-----*/
+.cover {
+    transition: all 0.4s ease;
+    border-radius: 10px;
+}
+/*-----*/
+.cover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px purple;
+    cursor: pointer;
+}
