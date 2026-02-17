@@ -41,10 +41,25 @@
 </footer>
 
 <script type="text/babel">
-    const { useState } = React;
+    const TrackItem = ({ track }) => (
+        <div className="d-flex flex-column align-items-center mb-5 w-100">
+            <h4 style={{ color: track.color, textShadow: track.shadow }}>{track.title}</h4>
+            <a href={track.link} target="_blank" className="d-flex justify-content-center">
+                <img
+                    className={`${track.imgClass} img-fluid shadow-lg`}
+                    src={track.img}
+                    alt={track.title}
+                    style={{ maxWidth: '500px', width: '90%' }}
+                />
+            </a>
+            <div className="text-center mt-3 px-3" style={{ maxWidth: '600px' }}>
+                <p style={{ color: track.color, textShadow: track.shadow }}>{track.desc1}</p>
+                <p style={{ color: track.color, textShadow: track.shadow }}>{track.desc2}</p>
+            </div>
+        </div>
+    );
 
-    const TrackList = () => {
-        // stored data
+    const App = () => {
         const tracks = [
             {
                 title: "Break it!:",
@@ -79,30 +94,16 @@
         ];
 
         return (
-            <div className="d-flex flex-column align-items-center">
-                {tracks.map((track, index) => (
-                    <div key={index} className="text-center mb-5">
-                        <h4 style={{ color: track.color }}>{track.title}</h4>
-                        <a href={track.link} target="_blank">
-                            <img
-                                className={track.imgClass}
-                                src={track.img}
-                                width="500"
-                                height="500"
-                                alt={track.title}
-                            />
-                        </a>
-                        <br /><br />
-                        <p style={{ color: track.color, textShadow: track.shadow }}>{track.desc1}</p>
-                        <p style={{ color: track.color, textShadow: track.shadow }}>{track.desc2}</p>
-                    </div>
-                ))}
+            <div className="row justify-content-center">
+                <div className="col-12 col-md-10 col-lg-8">
+                    {tracks.map((t, i) => <TrackItem key={i} track={t} />)}
+                </div>
             </div>
         );
     };
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<TrackList />);
+    root.render(<App />);
 </script>
 
 </body>
