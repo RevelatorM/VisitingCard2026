@@ -30,36 +30,29 @@ p{
     font-family: Courier New;
 }
 /*-----*/
-.cover {
+.cover, .cover2, .cover3 {
     transition: all 0.4s ease;
     border-radius: 10px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .cover:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px red;
+    transform: scale(1.02);
+    box-shadow: 0 0 25px red !important;
     cursor: pointer;
-}
-/*-----*/
-.cover2 {
-    transition: all 0.4s ease;
-    border-radius: 10px;
 }
 
 .cover2:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px black;
+    box-shadow: 0 0 25px black !important;
     cursor: pointer;
-}
-/*-----*/
-.cover3 {
-    transition: all 0.4s ease;
-    border-radius: 10px;
 }
 
 .cover3:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px white;
+    transform: scale(1.02);
+    box-shadow: 0 0 25px white !important;
     cursor: pointer;
 }
 /*-----*/
