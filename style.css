@@ -30,7 +30,7 @@ p{
     font-family: Courier New;
 }
 /*-----*/
-.cover, .cover2, .cover3 {
+.cover, .cover2, .cover3, .cover4 {
     transition: all 0.4s ease;
     border-radius: 10px;
     height: auto;
@@ -55,6 +55,11 @@ p{
     box-shadow: 0 0 25px white !important;
     cursor: pointer;
 }
+.cover4:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px blue !important;
+    cursor: pointer;
+}
 /*-----*/
 @media (max-width: 768px) {
     .header-h {
@@ -75,7 +80,7 @@ p{
         margin: 5px 0;
     }
 
-    .cover, .cover2, .cover3 {
+    .cover, .cover2, .cover3, .cover4 {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 }
